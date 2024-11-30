@@ -1,0 +1,213 @@
+:root {
+  --azul-1: #16325B;
+  --azul-2: #227B94;
+  --azul-3: #78B7D0;
+  --azul-4: #B9C9DB;
+  --amarillo: #F1C40F;
+  --beige: #A27B5C;
+  --blanco: #F7F9F9;
+  --negro: #161514;
+}
+
+html, body {
+  background-color: var(--azul-3);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.upload-container {
+  margin: 1rem auto;
+  width: 50%;
+  text-align: center;
+  background-color: var(--blanco);
+  border-radius: 10px;
+  padding: 50px 30px;
+  box-sizing: border-box;
+}
+
+.upload-container > .title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.upload-container .description {
+  color: var(--beige);
+}
+
+.upload-container .drag-drop {
+  border: dashed 3px var(--azul-4);
+  border-radius: 5px;
+  padding: 60px 30px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: var(--beige);
+  gap: 10px;
+}
+
+.upload-container .drag-drop .icon svg {
+  width: 100px;
+  height: 100px;
+  fill: var(--azul-4);
+}
+
+.upload-container .drag-drop .btn {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--azul-2);
+  color: var(--blanco);
+  border: none;
+  border-radius: 3px;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.upload-container .drag-drop .btn:hover {
+  background-color: var(--azul-1);
+}
+
+.upload-container .uploaded-files {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.upload-container .title-section {
+  text-align: left;
+  color: var(--beige);
+  font-weight: bolder;
+  padding-bottom: 20px;
+}
+
+.upload-container .uploaded-files .file {
+  border: 1px solid var(--azul-4);
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.upload-container .uploaded-files .file:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.upload-container .uploaded-files .file .icon img {
+  width: 48px;
+  height: 48px;
+}
+
+.upload-container .uploaded-files .file .title {
+  flex: 1;
+}
+
+.upload-container .uploaded-files .file .title .name {
+  display: block;
+  padding-bottom: 5px;
+}
+
+.upload-container .uploaded-files .file .title .size {
+  color: var(--beige);
+  font-size: 14px;
+}
+
+.upload-container .uploaded-files .file .title .progress {
+  height: 5px;
+  width: 100%;
+  background-color: var(--azul-4);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.upload-container .uploaded-files .file .title .progress .progress-60 {
+  background-color: var(--azul-2);
+  height: 5px;
+  width: 60%;
+  border-radius: 4px;
+}
+
+.upload-container .uploaded-files .file .actions button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-container .uploaded-files .file .actions button:hover {
+  background-color: var(--azul-4);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .upload-container {
+    width: 70%;
+    padding: 40px 20px;
+  }
+
+  .upload-container .drag-drop {
+    padding: 50px 20px;
+  }
+
+  .upload-container .drag-drop .icon svg {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .upload-container {
+    width: 90%;
+    padding: 30px 15px;
+  }
+
+  .upload-container .drag-drop {
+    padding: 40px 15px;
+  }
+
+  .upload-container .drag-drop .btn {
+    font-size: 14px;
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-container {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .upload-container .drag-drop {
+    padding: 30px 10px;
+  }
+
+  .upload-container .drag-drop .icon svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .upload-container .drag-drop .btn {
+    font-size: 12px;
+    padding: 10px;
+    min-width: 120px;
+  }
+
+  .upload-container .uploaded-files .file {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

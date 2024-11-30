@@ -1,0 +1,149 @@
+:root {
+  --color-1: #16325B;
+  --color-2: #227B94;
+  --color-3: #78B7D0;
+  --color-4: #B9C9DB;
+  --color-5: #F1C40F;
+  --color-6: #A27B5C;
+  --color-7: #F7F9F9;
+  --color-8: #161514;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Caveat', cursive;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-3);
+}
+
+.encabezado {
+  display: flex; /* Activa Flexbox */
+  flex-direction: row-reverse; /* Mantén los elementos en una fila */
+  width: 100%; /* Ocupa todo el ancho */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Alinea verticalmente al centro */
+  background-color: var(--color-1); /* Mantiene el color de fondo */
+  padding-top: 0.5rem; /* Mantén el espaciado superior */
+  padding-bottom: 0.5rem; /* Mantén el espaciado superior */
+  margin-bottom: 0;
+  gap: 1rem; /* Espacio entre el título y la imagen */
+}
+
+
+h1, h2, h3 {
+  text-align: center;
+  color: var(--color-7);
+  margin: 0;
+}
+
+.header-1 {
+  font-size: 3.5rem; /* Tamaño del texto */
+  color: var(--color-7); /* Asegura que sea visible sobre el fondo */
+  margin: 0; /* Elimina márgenes predeterminados */
+}
+
+.encabezado img {
+  width: 15rem; /* Tamaño de la imagen */
+  height: auto; /* Mantén las proporciones */
+}
+
+
+.contenedor {
+  margin: 0 auto;
+  width: 100%;
+  overflow: auto;
+  max-width: none;
+  height: auto;
+  background-color: var(--color-3);
+  padding-bottom: 0rem;
+}
+
+.head-2 {
+  padding-top: 3rem;
+  font-size: 2.75rem;
+}
+
+.var-entradas {
+  margin: 1.5rem auto;
+  width: 100%;
+  max-width: 80rem;
+  background-color: var(--color-2);
+  padding: 1.5rem 2.75rem;
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  background-color: var(--color-6);
+  color: var(--color-7);
+  font-size: 1.25rem;
+  text-align: right;
+  text-transform: uppercase;
+  padding: 0.75rem 1.75rem;
+  box-sizing: border-box;
+}
+
+label {
+  color: var(--color-7);
+  font-size: 1.25rem;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+.input-data {
+  width: 100%;
+  height: 2.25rem;
+  font-size: 1.75rem;
+  box-sizing: border-box;
+}
+
+.datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  column-gap: 3.5rem;
+  box-sizing: border-box;
+}
+
+.boton-alinear {
+  width: 100%;
+  max-width: 80rem;
+  margin: 3rem auto;
+  text-align: right;
+}
+
+.boton {
+  background-color: var(--color-1);
+  color: var(--color-7);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.25rem 5.75rem;
+  font-size: 1.25rem;
+}
+
+.boton:hover {
+  background-color: var(--color-7);
+  color: var(--color-6);
+  cursor: pointer;
+}
+
+.alinear-izquierda {
+  text-align: left;
+}
+

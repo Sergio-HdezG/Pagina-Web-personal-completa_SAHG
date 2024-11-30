@@ -1,0 +1,482 @@
+:root {
+  --azul-1: #16325B;
+  --azul-2: #227B94;
+  --azul-3: #78B7D0;
+  --azul-4: #B9C9DB;
+  --amarillo: #F1C40F;
+  --beige: #A27B5C;
+  --blanco: #F7F9F9;
+  --negro: #161514;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: var(--azul-4);
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.h1-header {
+  color: var(--azul-1);
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 0.67em;
+  font-style: arial;
+}
+
+span {
+  color: var(--azul-2);
+  font-size: 1.5rem;
+}
+
+.fondo-nav {
+  background-color: var(--azul-1);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 15%;
+}
+
+.menu a {
+  color: var(--blanco);
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 15rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  padding: 1.5rem 0;
+  font-style: arial;
+}
+
+.menu a:hover{
+  background-color: var(--azul-3);
+  color: var(--negro);
+}
+
+
+
+/* Curriculum>*/
+body {
+  
+  color: var(--negro);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+a {
+  color: var(--azul-2);
+}
+a:hover {
+  text-decoration: underline;
+  color: var(--azul-1);
+}
+a:focus {
+  text-decoration: none;
+}
+p {
+  line-height: 1.5;
+  text-align: justify;
+}
+.sombra {
+  box-shadow: 10px 10px 9px -4px rgba(0,0,0,0.62);
+-webkit-box-shadow: 10px 10px 9px -4px rgba(0,0,0,0.62);
+-moz-box-shadow: 10px 10px 9px -4px rgba(0,0,0,0.62);  
+}
+
+.wrapper {
+  font-family: 'Roboto', sans-serif;
+  background: var(--azul-3);
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 10px 10px 9px -4px rgba(0,0,0,0.62);
+  -webkit-box-shadow: 10px 10px 9px -4px rgba(0,0,0,0.62);
+  -moz-box-shadow: 10px 10px 9px -4px rgba(0,0,0,0.62);  
+  border: 3px solid black;
+}
+.sidebar-wrapper {
+  background: var(--azul-2);
+  position: absolute;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  min-height: 800px;
+  color: var(--blanco);
+}
+.sidebar-wrapper a {
+  color: var(--blanco);
+}
+.sidebar-wrapper .profile-container {
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: var(--blanco);
+}
+.sidebar-wrapper img {
+  width: 80%;
+  border-radius: 50%;
+}
+.sidebar-wrapper .name {
+  font-size: 32px;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.sidebar-wrapper .tagline {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.sidebar-wrapper .profile {
+  margin-bottom: 15px;
+}
+.sidebar-wrapper .contact-list .fa {
+  margin-right: 5px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+.sidebar-wrapper .contact-list li {
+  margin-bottom: 15px;
+}
+.sidebar-wrapper .contact-list li:last-child {
+  margin-bottom: 0;
+}
+.sidebar-wrapper .contact-list .email .fa {
+  font-size: 13px;
+}
+.sidebar-wrapper .container-block {
+  padding: 30px;
+}
+.sidebar-wrapper .container-block-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.sidebar-wrapper .degree {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.sidebar-wrapper .education-container .item {
+  margin-bottom: 15px;
+}
+.sidebar-wrapper .education-container .item:last-child {
+  margin-bottom: 0;
+}
+.sidebar-wrapper .education-container .meta {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  margin-bottom: 0px;
+  margin-top: 0;
+}
+.sidebar-wrapper .education-container .time {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+.sidebar-wrapper .languages-container .lang-desc {
+  color: rgba(255, 255, 255, 0.6);
+}
+.sidebar-wrapper .languages-list {
+  margin-bottom: 0;
+}
+.sidebar-wrapper .languages-list li {
+  margin-bottom: 10px;
+}
+.sidebar-wrapper .languages-list li:last-child {
+  margin-bottom: 0;
+}
+.sidebar-wrapper .interests-list {
+  margin-bottom: 0;
+}
+.sidebar-wrapper .interests-list li {
+  margin-bottom: 10px;
+}
+.sidebar-wrapper .interests-list li:last-child {
+  margin-bottom: 0;
+}
+.main-wrapper {
+  background: var(--blanco);
+  padding: 60px;
+  padding-right: 300px;
+}
+.main-wrapper .section-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--azul-2);
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.section-title .icon-circle {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: var(--beige);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: var(--blanco);
+}
+
+.icon-circle svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--blanco);
+}
+
+
+
+.main-wrapper .section {
+  margin-bottom: 60px;
+}
+.main-wrapper .experiences-section .item {
+  margin-bottom: 30px;
+}
+.main-wrapper .upper-row {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2px;
+}
+.main-wrapper .job-title {
+  color: var(--negro);
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+.main-wrapper .time {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--azul-2);
+}
+.main-wrapper .company {
+  margin-bottom: 10px;
+  color: var(--azul-2);
+  font-weight: bold;
+}
+.main-wrapper .project-title {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.main-wrapper .projects-section .intro {
+  margin-bottom: 30px;
+}
+.main-wrapper .projects-section .item {
+  margin-bottom: 15px;
+}
+.skillset .item {
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.skillset .level-title {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.skillset .level-bar {
+  height: 12px;
+  background: var(--blanco);
+}
+.skillset .level-bar-inner {
+  height: 12px;
+  background: var(--azul-3);
+}
+.footer {
+  background-color: var(--blanco);
+  max-width: 960px;
+  height: 3rem;
+  margin: 3rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+.margen-footer {
+  margin-right: 1rem;
+  color: var(--azul-2);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .sidebar-wrapper {
+    position: static;
+    width: inherit;
+  }
+  .main-wrapper {
+    padding: 30px;
+  }
+  .main-wrapper .time {
+    position: static;
+    display: block;
+    margin-top: 5px;
+  }
+  .main-wrapper .upper-row {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .skillset .level-title {
+    display: inline-block;
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .skillset .level-bar {
+    display: inline-block;
+    width: 70%;
+    position: relative;
+    top: 1px;
+  }
+}
+
+.profile-container .text-center{
+  margin: 5px;
+}
+
+
+
+
+
+@media(max-width: 768px){
+  .menu {
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu a {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.footer {
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.margen-footer {
+  font-size: 1.1rem;
+}
+
+form {
+  width: 90%;
+  padding: 2rem 2.5rem;
+}
+
+.head-servicios {
+  font-size: 2.5rem;
+}
+
+.head-3 {
+  font-size: 2.2rem;
+}
+
+.servicios {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.icon-servicio {
+  width: 12rem;
+  height: 12rem;
+}
+
+.p-servicio {
+  font-size: 1.4rem;
+}
+
+
+}
+
+@media (max-width: 480px) {
+  .menu a {
+      font-size: 2rem;
+      padding: 0.8rem;
+  }
+  .footer {
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.margen-footer {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+form {
+  width: 95%;
+  padding: 1.5rem 2rem;
+}
+
+.head-servicios {
+  font-size: 2rem;
+  padding-top: 2rem;
+}
+
+.head-3 {
+  font-size: 1.8rem;
+}
+
+.servicios {
+  grid-template-columns: 1fr;
+  margin: 1rem 0;
+}
+
+.icon-servicio {
+  width: 10rem;
+  height: 10rem;
+}
+
+.p-servicio {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+
+}

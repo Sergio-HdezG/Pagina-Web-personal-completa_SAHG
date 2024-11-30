@@ -1,0 +1,149 @@
+:root {
+    /*Paleta de colores*/
+    --color-1: #16325B;
+    --color-2: #227B94;
+    --color-3: #78B7D0;
+    --color-4: #B9C9DB;
+    --color-5: #F1C40F;
+    --color-6: #A27B5C;
+    --color-7: #F7F9F9;
+    --color-8: #161514;
+    /*Colores para el IMC*/
+    --peso-bajo: #009FE2;
+    --peso-normal: #94C120;
+    --sobrepeso: #F7C332;
+    --obesidad-i: #E89B11;
+    --obesidad-ii: #EA5B0B;
+    --obesidad-iii: #E40613;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-3);
+    color: var(--color-8);
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    background-color: var(--color-1);
+    color: var(--color-7);
+    padding: 2rem;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+section {
+    background-color: var(--color-7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 20px;
+    border: 1px solid var(--color-8);
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+button {
+    background-color: var(--color-1);
+    color: var(--color-7);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--color-2);
+}
+
+#resultado {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#imc-value span {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#imc-category {
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.peso-bajo {
+    background-color: var(--peso-bajo);
+    color: var(--color-8);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.peso-normal {
+    background-color: var(--peso-normal);
+    color: var(--color-8);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.sobrepeso {
+    background-color: var(--sobrepeso);
+    color: var(--color-8);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.obesidad-i {
+    background-color: var(--obesidad-i);
+    color: var(--color-7);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.obesidad-ii {
+    background-color: var(--obesidad-ii);
+    color: var(--color-7);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.obesidad-iii {
+    background-color: var(--obesidad-iii);
+    color: var(--color-7);
+    font-weight: bold;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: var(--color-8);
+}

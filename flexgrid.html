@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexgrid</title>
+    <link rel="shortcut icon" href="./img/grid.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>Sergio Hernández <span>Estudiante de Ingenieria en Computación</span></h1>
+    <div class="fondo-nav">
+        <nav class="menu">
+            <a href="./index.html">Incio</a>
+            <a href="./clientes.html">Clientes</a>
+            <a href="./sobremi.html">Sobre mi</a>
+            <a href="./contacto.html">Contacto</a>
+         </nav>
+    </div>
+    <div class="titulo">
+        <img src="./img/grid.png" alt="CSS">
+        <h2 class="head-2-tit">Prácticas Flexbox y Grid</h2>
+    </div>
+    
+    <main class="contenedor sombra">
+        <header> <h1 class="h1-header">Ejemplos Flexbox y Grid</h1></header>
+        <div class="contenedor-flex">
+            <iframe src="./Flexbox-Grid/index.html" frameborder="0"></iframe>
+        </div>
+    </main>
+    <script>
+        function ajustarAlturaContenedor(claseContenedor) {
+            const contenedor = document.querySelector(`.${claseContenedor}`);
+            const iframe = contenedor.querySelector("iframe");
+    
+            if (iframe && iframe.contentWindow) {
+                const alturaIframe = iframe.contentWindow.document.body.scrollHeight;
+                contenedor.style.height = `${alturaIframe}px`;
+            }
+        }
+    
+        function observarCambiosEnIframe(iframe, claseContenedor) {
+            const observer = new MutationObserver(() => {
+                ajustarAlturaContenedor(claseContenedor);
+            });
+    
+            observer.observe(iframe.contentWindow.document.body, {
+                childList: true,
+                subtree: true,
+                attributes: true,
+            });
+    
+            window.addEventListener("resize", () => {
+                ajustarAlturaContenedor(claseContenedor);
+            });
+        }
+    
+        const iframes = document.querySelectorAll("iframe");
+        iframes.forEach((iframe) => {
+            iframe.addEventListener("load", () => {
+                const contenedorClase = iframe.parentElement.classList[0];
+                ajustarAlturaContenedor(contenedorClase);
+                observarCambiosEnIframe(iframe, contenedorClase);
+            });
+        });
+    </script>
+    <div class="footer sombra">
+        <footer class="margen-footer">
+            Todos los derechos reservados - Sergio Alberto Hernández García
+        </footer>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login responsivo</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="form-container">
+        <div class="login-container">
+            <h2>Welcome</h2>
+            <p>Selecciona el método de autenticación</p>
+  
+            <form action="">
+                <p>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" class="input"/>
+                </p>
+    
+                <p>
+                    <label for="password">Password</label>
+                    <input class="input" type="password" name="password" />
+                </p>
+    
+                <div class="options">
+                    <div>
+                        Remember me 
+                        <input type="checkbox" name="remeberme" id="" />
+                    </div>
+                    <div>
+                        <a href="#">I forgot my password</a>
+                    </div>
+                </div>
+    
+                <p>
+                    <input class="btn btn-login" type="submit" value="Log in" />
+                </p>
+                <div class="providers">
+                    <span>Choose another method to authenticate</span>
+                    <button class="btn btn-google">Google</button>
+                    <button class="btn btn-facebook">Facebook</button>
+                    <button class="btn btn-twitter">Twitter</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="welcome-screen-container"></div>
+    </div>
+</body>
+</html>

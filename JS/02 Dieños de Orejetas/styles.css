@@ -1,0 +1,140 @@
+:root { 
+    --color-1: #16325B;
+    --color-2: #227B94;
+    --color-3: #78B7D0;
+    --color-4: #B9C9DB;
+    --color-5: #F1C40F;
+    --color-6: #A27B5C;
+    --color-7: #F7F9F9;
+    --color-8: #161514;
+}
+body{
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    background-color: var(--color-3);
+    padding: 25px 0;
+}
+
+h1 {
+    text-align: center;
+    color: var(--color-7);
+    background-color: var(--color-2);
+    margin: 0 25px;
+}  
+
+h2 {
+    text-align: center;
+    color: var(--color-7);
+    background-color: var(--color-2);
+    margin: 25px 25px 0px 25px;
+}
+
+h3 {    
+    color: var(--color-4);
+    text-transform: uppercase;
+    background-color: var(--color-2);
+    padding: 2.5px;
+}
+
+form {
+    margin: 0px 25px;
+}
+
+legend {
+    padding: 25px 0px;
+    color: var(--color-1);
+    text-transform: uppercase; 
+}
+
+fieldset {
+    margin-top: 0px;
+}
+
+label {
+    color: var(--color-8);    
+}
+
+.data-inputs {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 3.5px;
+    margin: 0px;
+}
+
+.lug, .sujetador {
+    display: grid;
+    grid-template-columns: 0.25fr 0.75fr;
+    margin-top: 1.5rem;
+}
+
+.lug, .sujetador label {
+    text-align: right;
+    margin-right: 5px;
+}
+
+.lug-datos {
+    color: var(--color-7);
+}
+
+.lug-datos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
+    margin-top: 1.5rem;
+    margin-left: 10rem;
+    margin-right: 5px;
+    row-gap: 0.85rem;
+    column-gap: 0.85rem;
+}
+
+.lug-dato input {
+    width: 100%;
+    margin-top: 0.35rem;
+}
+
+.btn-alinear {
+    text-align: right;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    background-color: var(--color-1);
+    color: var(--color-5);
+    text-transform: uppercase;
+    padding: .75rem 2.5rem;
+    border-color: var(--color-3);
+    border-width: 2.5px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--color-5);
+    color: var(--color-8);
+    border-color: var(--color-2);
+    
+}
+
+input[disabled] {
+    color: red;
+    background-color: var(--color-8);
+    border-color: var(--color-7);
+    font-weight: bold;
+    padding-left: 5.5px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .lug-datos {
+        grid-template-columns: 1fr;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+}

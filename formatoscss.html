@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="shortcut icon" href="./img/css.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>Sergio Hernández <span>Estudiante de Ingenieria en Computación</span></h1>
+    <div class="fondo-nav">
+        <nav class="menu">
+            <a href="./index.html">Incio</a>
+            <a href="./clientes.html">Clientes</a>
+            <a href="./sobremi.html">Sobre mi</a>
+            <a href="./contacto.html">Contacto</a>
+         </nav>
+    </div>
+    <div class="titulo">
+        <img src="./img/css.png" alt="CSS">
+        <h2 class="head-2-tit">Prácticas de Formatos CSS</h2>
+    </div>
+    
+    <main class="contenedor sombra">
+        <header> <h1 class="h1-header">Barra de búsqueda</h1></header>
+        <div class="contenedor-css-1">
+            <iframe src="./formcss/09 Barra de búsqueda/index.html" frameborder="0"></iframe>
+        </div>
+    </main>
+    <main class="contenedor sombra">
+        <header> <h1 class="h1-header">Login responsivo</h1></header>
+        <div class="contenedor-css-2">
+            <iframe src="./formcss/05 Login responsivo/index.html" frameborder="0"></iframe>
+        </div>
+    </main>
+    <main class="contenedor sombra">
+        <header> <h1 class="h1-header">Modal responsivo</h1></header>
+        <div class="contenedor-css-3">
+            <iframe src="./formcss/15 Modal responsivo/index.html" frameborder="0"></iframe>
+        </div>
+    </main>
+    <main class="contenedor sombra">
+        <header> <h1 class="h1-header">Slider</h1></header>
+        <div class="contenedor-css-4">
+            <iframe src="./formcss/18 Slider/index.html" frameborder="0"></iframe>
+        </div>
+    </main>
+    <main class="contenedor sombra">
+        <header> <h1 class="h1-header">Widget de clima</h1></header>
+        <div class="contenedor-css-5">
+            <iframe src="./formcss/20 Widget de clima/index.html" frameborder="0"></iframe>
+        </div>
+    </main>
+    <main class="contenedor sombra">
+        <header> <h1 class="h1-header">Tarjetas de selección</h1></header>
+        <div class="contenedor-css-6">
+            <iframe src="./formcss/02 Tarjetas de selección/index.html" frameborder="0"></iframe>
+        </div>
+    </main>
+    <main class="contenedor sombra">
+        <header> <h1 class="h1-header">Vuelta a tarjeta</h1></header>
+        <div class="contenedor-css-7">
+            <iframe src="./formcss/10 Vuelta a tarjeta/index.html" frameborder="0"></iframe>
+        </div>
+    </main>
+    <main class="contenedor sombra">
+        <header> <h1 class="h1-header">Stack de personas</h1></header>
+        <div class="contenedor-css-8">
+            <iframe src="./formcss/12 Stack de personas/index.html" frameborder="0"></iframe>
+        </div>
+    </main>
+    <main class="contenedor sombra">
+        <header> <h1 class="h1-header">UI Drag & Drop</h1></header>
+        <div class="contenedor-css-9">
+            <iframe src="./formcss/16 UI Drag & Drop/index.html" frameborder="0"></iframe>
+        </div>
+    </main>
+    <main class="contenedor sombra">
+        <header> <h1 class="h1-header">Animación de notificación</h1></header>
+        <div class="contenedor-css-10">
+            <iframe src="./formcss/04 Animación de notificación/index.html" frameborder="0"></iframe>
+        </div>
+    </main>
+    
+    <br>
+    <script>
+        function ajustarAlturaContenedor(claseContenedor) {
+            const contenedor = document.querySelector(`.${claseContenedor}`);
+            const iframe = contenedor.querySelector("iframe");
+    
+            if (iframe && iframe.contentWindow) {
+                const alturaIframe = iframe.contentWindow.document.body.scrollHeight;
+                contenedor.style.height = `${alturaIframe}px`;
+            }
+        }
+    
+        function observarCambiosEnIframe(iframe, claseContenedor) {
+            const observer = new MutationObserver(() => {
+                ajustarAlturaContenedor(claseContenedor);
+            });
+    
+            observer.observe(iframe.contentWindow.document.body, {
+                childList: true,
+                subtree: true,
+                attributes: true,
+            });
+    
+            window.addEventListener("resize", () => {
+                ajustarAlturaContenedor(claseContenedor);
+            });
+        }
+    
+        const iframes = document.querySelectorAll("iframe");
+        iframes.forEach((iframe) => {
+            iframe.addEventListener("load", () => {
+                const contenedorClase = iframe.parentElement.classList[0];
+                ajustarAlturaContenedor(contenedorClase);
+                observarCambiosEnIframe(iframe, contenedorClase);
+            });
+        });
+    </script>
+    <div class="footer sombra">
+        <footer class="margen-footer">
+            Todos los derechos reservados - Sergio Alberto Hernández García
+        </footer>
+    </div>    
+</body>
+</html>

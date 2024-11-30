@@ -1,0 +1,69 @@
+:root {
+  --azul-1: #16325B;
+  --azul-2: #227B94;
+  --azul-3: #78B7D0;
+  --azul-4: #B9C9DB;
+  --amarillo: #F1C40F;
+  --beige: #A27B5C;
+  --blanco: #F7F9F9;
+  --negro: #161514;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    background-color: var(--azul-4);
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+  }
+
+  h1 {
+    color: var(--azul-1);
+    font-size: 3.5rem;
+  }
+
+  span {
+    color: var(--azul-2);
+    font-size: 1.5rem;
+  }
+
+  .fondo-nav {
+    background-color: var(--azul-1);
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    
+    margin: 0 15%;
+  }
+
+  .menu a {
+    color: var(--blanco);
+    font-style: bold;
+    font-size: 1.5rem;
+    width: 15rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    padding: 1.5rem 0;
+  }
+
+  .menu a:hover{
+    background-color: var(--azul-3);
+    color: var(--negro);
+  }
+  .head-2 {
+    font-size: 3.2rem;
+    color: var(--blanco);
+    margin: 2.6rem 0;
+  }

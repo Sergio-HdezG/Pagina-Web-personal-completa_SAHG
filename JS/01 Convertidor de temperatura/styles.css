@@ -1,0 +1,92 @@
+:root { 
+    --color-1: #16325B;
+    --color-2: #227B94;
+    --color-3: #78B7D0;
+    --color-4: #B9C9DB;
+    --color-5: #F1C40F;
+    --color-6: #A27B5C;
+    --color-7: #F7F9F9;
+    --color-8: #161514;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-3);
+    color: var(--color-7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    background-color: var(--color-1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    margin: 3rem 0rem 3rem 0rem;
+}
+
+h1 {
+    color: var(--color-5);
+    margin-bottom: 20px;
+}
+
+.conversion-box {
+    background-color: var(--color-4);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: var(--color-6);
+}
+
+input[type="number"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--color-3);
+    border-radius: 4px;
+    background-color: var(--color-4);
+    color: var(--color-8);
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--color-2);
+    color: var(--color-7);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-5);
+}
+
+.result-group input {
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-1);
+    background-color: var(--color-7);
+}

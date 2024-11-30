@@ -1,0 +1,301 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #f0f0f0;
+    padding: 3rem;
+}
+h1{
+    color: #16325B;    
+}
+h2 {
+    color: #A27B5C;
+    font-size: 1.5em;
+}
+
+.flex-wrapper {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #16325B;
+    background-color: #B9C9DB;
+}
+
+.flex-ejemplo-1 {
+    flex-wrap: wrap;
+}
+
+.flex-ejemplo-1 > div {
+    flex: 1 1 150px;
+    background-color: #227B94;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.flex-ejemplo-2 {
+    align-items: flex-end;
+    min-height: 200px;
+}
+
+.flex-ejemplo-2 .box1 {
+    align-self: stretch;
+    background-color: #78B7D0;
+}
+
+.flex-ejemplo-2 .box2 {
+    align-self: flex-start;
+    background-color: #227B94;
+}
+
+.flex-ejemplo-2 .box3 {
+    background-color: #16325B;
+}
+
+.flex-ejemplo-3 > div {
+    flex-grow: 1;
+    background-color: #227B94;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.flex-ejemplo-4 > div {
+    background-color: #227B94;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.flex-ejemplo-5 {
+    justify-content: space-between;
+}
+
+.flex-ejemplo-5 > div {
+    background-color: #227B94;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.flex-ejemplo-6 {
+    align-items: center;
+    min-height: 200px;
+}
+
+.flex-ejemplo-6 > div {
+    flex: 1;
+    background-color: #227B94;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.flex-ejemplo-7 {
+    justify-content: space-around;
+}
+
+.flex-ejemplo-7 > div {
+    background-color: #227B94;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.flex-ejemplo-8 > div {
+    flex: 1 1 100px;
+    background-color: #227B94;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.flex-ejemplo-9 > div {
+    margin: auto;
+    background-color: #227B94;
+    padding: 10px;
+    text-align: center;
+}
+
+.flex-ejemplo-10 {
+    flex-direction: column;
+}
+
+.flex-ejemplo-10 > div {
+    background-color: #227B94;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.grid-wrapper {
+    display: grid;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #16325B;
+    background-color: #B9C9DB;
+}
+
+.grid-ejemplo-1 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-ejemplo-1 > div {
+    background-color: #227B94;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.grid-ejemplo-2 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-ejemplo-2 > div {
+    background-color: #227B94;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.grid-ejemplo-3 {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    grid-auto-rows: 200px;
+}
+
+.box1 {
+    align-self: stretch;
+    background-color: #227B94;
+}
+
+.box2 {
+    align-self: flex-start;
+    background-color: #227B94;
+}
+
+.box3 {
+    background-color: #227B94;
+}
+
+.grid-ejemplo-4 {
+    grid-template-columns: repeat(auto-fill, 100px);
+}
+
+.grid-ejemplo-4 > div {
+    background-color: #227B94;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.grid-ejemplo-5 {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.grid-ejemplo-5 > div {
+    background-color: #227B94;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+  }
+
+.grid-ejemplo-6 {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 100px 1fr 50px;
+}
+
+.header {
+  grid-area: header;
+  background-color: #227B94;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #F1C40F;
+}
+
+.content {
+  grid-area: content;
+  background-color: #78B7D0;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #A27B5C;
+}
+
+.grid-ejemplo-7 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.grid-ejemplo-7 > div {
+  background-color: #227B94;
+  padding: 10px;
+  text-align: center;
+}
+
+.grid-ejemplo-8 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tall {
+  grid-row: span 2;
+  background-color: #227B94;
+}
+
+.grid-ejemplo-8 > div {
+  background-color: #227B94;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+
+.grid-ejemplo-9 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.box1 {
+  grid-column: span 2;
+  background-color: #227B94;
+}
+
+.box2 {
+  background-color: #78B7D0;
+}
+
+.box3 {
+  background-color: #A27B5C;
+}
+
+.grid-ejemplo-10 {
+  position: relative;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.box3 {
+  position: relative;
+}
+
+.abspos {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #227B94;
+  border: 1px solid #16325B;
+  padding: 10px;
+}

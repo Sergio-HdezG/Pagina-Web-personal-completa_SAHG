@@ -1,0 +1,124 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+  
+.cards {
+    display: flex;
+    width: 100%;
+    padding: 50px;
+    justify-content: center;
+}
+  
+.cards .card{
+    background: #227B94;
+    color: #F7F9F9;
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  
+    transition: all 0.3s ease;
+
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.3), -4px 0 10px rgba(0, 0, 0, 0.2),
+        -5px 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.cards .card a {
+    color: #F1C40F;
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+.cards .card a:hover {
+    color: #F7F9F9;
+}
+ 
+.cards .card .header {
+    flex: 1;
+}
+
+.cards .card:hover {
+    margin-right: 80px;
+    transform: rotate(3deg) translateY(-15px);
+}
+    
+.cards .card .header .date {
+    padding: 10px 0;
+}
+  
+.cards .card .header .title {
+    font-size: 28px;
+}
+
+.cards .card .footer .autor a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cards .card .footer img {
+    width: 49px;
+    border-radius: 50%;
+}
+  
+.cards .card[class*="element"] {
+    margin-left: -100px;
+}
+  
+.element-1:hover,
+.element-2:hover {
+    margin-left: -130px;
+}
+
+@media (max-width: 1200px) {
+    .cards {
+        padding: 30px;
+    }
+
+    .cards .card {
+        width: 250px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 900px) {
+    .cards .card {
+        width: 200px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cards .card {
+        width: 90%;
+        height: 250px;
+        margin: 10px 0;
+        font-size: 10px;
+    }
+
+    .cards {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .cards .card {
+        width: 40%;
+        height: 220px;
+    }
+}
+@media (max-width: 380px) {
+    .cards .card {
+        width: 40%;
+        height: 220px;
+        font-size: 8px;
+    }
+}
